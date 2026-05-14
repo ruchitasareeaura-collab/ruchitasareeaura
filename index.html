@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>রুচিতা সেরি আউরা - প্রিমিয়াম শাড়ি সংগ্রহ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <div class="header-container">
+            <!-- Logo Section -->
+            <div class="logo">
+                <div class="logo-text">
+                    <span class="logo-ruchita">Ruchita</span>
+                    <span class="logo-saree-aura">Saree Aura</span>
+                </div>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
+                <a href="./index.html" class="nav-link active">হোম</a>
+                <a href="./shop.html" class="nav-link">শপ</a>
+                <a href="./about.html" class="nav-link">আমাদের সম্পর্কে</a>
+                <a href="./contact.html" class="nav-link">যোগাযোগ</a>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <input type="text" class="search-box" placeholder="শাড়ি খুঁজুন...">
+                <button class="cart-btn" id="cart-btn">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section with Banner Image -->
+    <section class="hero-section">
+        <div class="hero-banner" style="background-image: url('./images/hero-banner.jpg');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>রুচিতা সেরি আউরা</h1>
+                <p>ঐতিহ্য এবং কমনীয়তার নিখুঁত সমন্বয়</p>
+                <a href="./shop.html" class="cta-btn">এখনই কেনাকাটা করুন</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-section">
+        <div class="container">
+            <h2>বিশেষ সংগ্রহ</h2>
+            <p class="section-subtitle">আমাদের সবচেয়ে জনপ্রিয় এবং এক্সক্লুসিভ শাড়ি সংগ্রহ</p>
+            <div class="products-grid" id="featured-products">
+                <!-- Featured products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>রুচিতা সম্পর্কে</h2>
+                    <p><strong>রুচিতা সেরি আউরা: যেখানে ঐতিহ্য মিলিত হয় কমনীয়তার সাথে।</strong></p>
+                    <p>শাড়ি আমাদের ঐতিহ্যের একটি কালজয়ী প্রকাশ। আমরা আপনার দোরগোড়ায় নিয়ে আসি চিরন্তন সৌন্দর্য এবং হস্তবুননির্মিত জামদানি, খাঁটি সিল্ক, ঐতিহ্যবাহী তাঁত এবং শিল্পসম্মত বাটিক শাড়ির এক অনন্য সংগ্রহ।</p>
+                    <p>প্রতিটি শাড়ি তৈরি হয় যত্ন, দক্ষতা এবং ভালোবাসার সাথে। আমরা বিশ্বাস করি যে প্রতিটি নারী অনন্য এবং তাদের প্রাপ্য সেরা মানের পণ্য।</p>
+                    <a href="./about.html" class="link-btn">আরও জানুন →</a>
+                </div>
+                <div class="about-image">
+                    <img src="./images/saree-01.jpg" alt="রুচিতা সেরি আউরা" loading="lazy" width="400" height="600">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2>কেন রুচিতা বেছে নিন?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>খাঁটি ঐতিহ্য</h3>
+                    <p>প্রতিটি শাড়ি তৈরি হয় ঐতিহ্যবাহী কারুশিল্পের মাধ্যমে যা প্রজন্মের পর প্রজন্ম ধরে চলে আসছে।</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>প্রিমিয়াম মানের</h3>
+                    <p>শুধুমাত্র সেরা মানের ফ্যাব্রিক এবং উপকরণ ব্যবহার করে আমরা তৈরি করি প্রতিটি শাড়ি।</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>দ্রুত ডেলিভারি</h3>
+                    <p>ঢাকার মধ্যে ৮০ টাকা এবং বাইরে ১২০ টাকায় দ্রুত এবং নিরাপদ ডেলিভারি।</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">↩️</div>
+                    <h3>সহজ রিটার্ন</h3>
+                    <p>৭ দিনের মধ্যে কোন প্রশ্ন ছাড়াই পণ্য ফেরত দিতে পারবেন এবং সম্পূর্ণ টাকা ফেরত পাবেন।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <h2>আমাদের নিউজলেটার সাবস্ক্রাইব করুন</h2>
+            <p>নতুন সংগ্রহ, বিশেষ অফার এবং এক্সক্লুসিভ ডিল সম্পর্কে জানুন সবার আগে।</p>
+            <form class="newsletter-form" id="newsletter-form">
+                <input type="email" placeholder="আপনার ইমেইল ঠিকানা" required>
+                <button type="submit" class="submit-btn">সাবস্ক্রাইব করুন</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>📞 যোগাযোগ তথ্য</h4>
+                    <p><strong>হোয়াটসঅ্যাপ/ফোন:</strong> +880 1885092595</p>
+                    <p><strong>ইমেইল:</strong> ruchitasaree0622@gmail.com</p>
+                </div>
+                <div class="footer-col">
+                    <h4>📍 ঠিকানা</h4>
+                    <p><strong>রুচিতা™ RuchitaSareeAura</strong><br>Sekertek 10, Adabar Thana<br>Dhaka - 1207, Bangladesh</p>
+                </div>
+                <div class="footer-col">
+                    <h4>🚚 শিপিং এবং রিটার্ন</h4>
+                    <p>✓ ঢাকার মধ্যে: ৮০ টাকা</p>
+                    <p>✓ ঢাকার বাইরে: ১২০ টাকা</p>
+                    <p>✓ সহজ ৭ দিনের রিটার্ন পলিসি</p>
+                </div>
+                <div class="footer-col">
+                    <h4>🌐 আমাদের অনুসরণ করুন</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1ZyJMqjUBj/" target="_blank" title="Facebook Page">f</a>
+                        <a href="https://www.facebook.com/share/g/18VQsJhz7M/" target="_blank" title="Facebook Group">👥</a>
+                        <a href="https://www.instagram.com/ruchitasareeaura?igsh=MTByM2w5OW1hNWZqNg==" target="_blank" title="Instagram">📷</a>
+                        <a href="https://whatsapp.com/channel/0029Vb81Y01C1FuL0w0vw01C" target="_blank" title="WhatsApp Channel">💬</a>
+                        <a href="https://wa.me/8801885092595" target="_blank" title="WhatsApp Direct">📱</a>
+                        <a href="https://x.com/RuchitaSaree01" target="_blank" title="X (Twitter)">𝕏</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 রুচিতা™ RuchitaSareeAura. সর্বাধিকার সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/products.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

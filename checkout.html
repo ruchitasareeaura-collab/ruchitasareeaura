@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>চেকআউট - রুচিতা সেরি আউরা</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500;600;700&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="./index.html" class="logo-link">
+                    <div class="logo-text">
+                        <span class="logo-ruchita">Ruchita</span>
+                        <span class="logo-saree-aura">Saree Aura</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <a href="./index.html" class="nav-link">হোম</a>
+                <a href="./shop.html" class="nav-link">শপ</a>
+                <a href="./about.html" class="nav-link">আমাদের সম্পর্কে</a>
+                <a href="./contact.html" class="nav-link">যোগাযোগ</a>
+            </nav>
+            <div class="header-actions">
+                <input type="text" class="search-box" placeholder="শাড়ি খুঁজুন...">
+                <button class="cart-btn" id="cart-btn">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+            </div>
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <!-- Checkout Container -->
+    <div class="checkout-container">
+        <div class="container">
+            <h1 class="checkout-title">চেকআউট</h1>
+            
+            <div class="checkout-content">
+                <!-- Order Form -->
+                <div class="checkout-form-section">
+                    <h2>ডেলিভারি তথ্য</h2>
+                    <form id="checkout-form" class="checkout-form">
+                        <!-- Full Name -->
+                        <div class="form-group">
+                            <label for="full-name">সম্পূর্ণ নাম *</label>
+                            <input type="text" id="full-name" name="full-name" required placeholder="আপনার সম্পূর্ণ নাম লিখুন">
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="form-group">
+                            <label for="phone">ফোন নম্বর *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="০১৭/০১৮/০১৯ দিয়ে শুরু করুন">
+                        </div>
+
+                        <!-- Delivery Address -->
+                        <div class="form-group">
+                            <label for="address">সম্পূর্ণ ডেলিভারি ঠিকানা *</label>
+                            <textarea id="address" name="address" required placeholder="বাড়ির নম্বর, রাস্তা, এলাকা, জেলা লিখুন" rows="4"></textarea>
+                        </div>
+
+                        <!-- Delivery Location -->
+                        <div class="form-group">
+                            <label for="location">ডেলিভারি এলাকা *</label>
+                            <select id="location" name="location" required>
+                                <option value="">এলাকা নির্বাচন করুন</option>
+                                <option value="dhaka">ঢাকার মধ্যে (৮০ টাকা)</option>
+                                <option value="outside">ঢাকার বাইরে (১২০ টাকা)</option>
+                            </select>
+                        </div>
+
+                        <!-- Payment Method -->
+                        <div class="form-group">
+                            <label>পেমেন্ট পদ্ধতি *</label>
+                            <div class="payment-methods">
+                                <label class="payment-option">
+                                    <input type="radio" name="payment-method" value="cod" checked>
+                                    <span class="payment-label">
+                                        <strong>নগদ প্রদান (COD)</strong>
+                                        <small>ডেলিভারির সময় পেমেন্ট করুন</small>
+                                    </span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment-method" value="bkash">
+                                    <span class="payment-label">
+                                        <strong>bKash</strong>
+                                        <small>মোবাইল ব্যাংকিং এর মাধ্যমে পেমেন্ট</small>
+                                    </span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment-method" value="nagad">
+                                    <span class="payment-label">
+                                        <strong>Nagad</strong>
+                                        <small>মোবাইল ব্যাংকিং এর মাধ্যমে পেমেন্ট</small>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Transaction ID (for bKash/Nagad) -->
+                        <div class="form-group" id="trx-id-group" style="display: none;">
+                            <label for="trx-id">লেনদেন আইডি (TrxID) *</label>
+                            <input type="text" id="trx-id" name="trx-id" placeholder="আপনার লেনদেন আইডি লিখুন">
+                        </div>
+
+                        <!-- Special Notes -->
+                        <div class="form-group">
+                            <label for="notes">বিশেষ নোট (ঐচ্ছিক)</label>
+                            <textarea id="notes" name="notes" placeholder="কোন বিশেষ অনুরোধ থাকলে লিখুন" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary-section">
+                    <div class="order-summary">
+                        <h2>অর্ডার সারসংক্ষেপ</h2>
+                        
+                        <!-- Cart Items -->
+                        <div class="summary-items" id="summary-items">
+                            <!-- Items will be loaded here -->
+                        </div>
+
+                        <!-- Subtotal -->
+                        <div class="summary-row">
+                            <span>সাবটোটাল:</span>
+                            <span id="subtotal">৳০</span>
+                        </div>
+
+                        <!-- Delivery Charge -->
+                        <div class="summary-row">
+                            <span>ডেলিভারি চার্জ:</span>
+                            <span id="delivery-charge">৳৮০</span>
+                        </div>
+
+                        <!-- Total -->
+                        <div class="summary-row total">
+                            <span>মোট:</span>
+                            <span id="total">৳০</span>
+                        </div>
+
+                        <!-- Confirm Order Button -->
+                        <button class="confirm-order-btn" id="confirm-order-btn">অর্ডার নিশ্চিত করুন</button>
+
+                        <!-- Continue Shopping Button -->
+                        <a href="./shop.html" class="continue-shopping-btn">কেনাকাটা চালিয়ে যান</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>📞 যোগাযোগ তথ্য</h4>
+                    <p><strong>হোয়াটসঅ্যাপ/ফোন:</strong> +880 1885092595</p>
+                    <p><strong>ইমেইল:</strong> ruchitasaree0622@gmail.com</p>
+                </div>
+                <div class="footer-col">
+                    <h4>📍 ঠিকানা</h4>
+                    <p><strong>রুচিতা™ RuchitaSareeAura</strong><br>Sekertek 10, Adabar Thana<br>Dhaka - 1207, Bangladesh</p>
+                </div>
+                <div class="footer-col">
+                    <h4>🚚 শিপিং এবং রিটার্ন</h4>
+                    <p>✓ ঢাকার মধ্যে: ৮০ টাকা</p>
+                    <p>✓ ঢাকার বাইরে: ১২০ টাকা</p>
+                    <p>✓ সহজ ৭ দিনের রিটার্ন পলিসি</p>
+                </div>
+                <div class="footer-col">
+                    <h4>🌐 আমাদের অনুসরণ করুন</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1ZyJMqjUBj/" target="_blank" title="Facebook Page">f</a>
+                        <a href="https://www.facebook.com/share/g/18VQsJhz7M/" target="_blank" title="Facebook Group">👥</a>
+                        <a href="https://www.instagram.com/ruchitasareeaura?igsh=MTByM2w5OW1hNWZqNg==" target="_blank" title="Instagram">📷</a>
+                        <a href="https://whatsapp.com/channel/0029Vb81Y01C1FuL0w0vw01C" target="_blank" title="WhatsApp Channel">💬</a>
+                        <a href="https://wa.me/8801885092595" target="_blank" title="WhatsApp Direct">📱</a>
+                        <a href="https://x.com/RuchitaSaree01" target="_blank" title="X (Twitter)">𝕏</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 রুচিতা™ RuchitaSareeAura. সর্বাধিকার সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/products.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/checkout.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

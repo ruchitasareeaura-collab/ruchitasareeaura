@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>প্রোডাক্ট ডিটেইল - রুচিতা সেরি আউরা</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500;600;700&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="./index.html" class="logo-link">
+                    <div class="logo-text">
+                        <span class="logo-ruchita">Ruchita</span>
+                        <span class="logo-saree-aura">Saree Aura</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <a href="./index.html" class="nav-link">হোম</a>
+                <a href="./shop.html" class="nav-link">শপ</a>
+                <a href="./about.html" class="nav-link">আমাদের সম্পর্কে</a>
+                <a href="./contact.html" class="nav-link">যোগাযোগ</a>
+            </nav>
+            <div class="header-actions">
+                <input type="text" class="search-box" placeholder="শাড়ি খুঁজুন...">
+                <button class="cart-btn" id="cart-btn">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+            </div>
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <!-- Product Details -->
+    <div class="product-details-container">
+        <div class="container">
+            <div class="product-details">
+                <div class="product-gallery">
+                    <div class="main-image-wrapper">
+                        <img id="main-image" src="./images/saree-01.jpg" alt="প্রোডাক্ট ইমেজ" loading="lazy" width="800" height="1200">
+                    </div>
+                    <div class="thumbnail-gallery" id="thumbnail-gallery"></div>
+                </div>
+
+                <div class="product-info">
+                    <h1 id="product-name">রুচিতা প্রিমিয়াম জামদানি শাড়ি</h1>
+                    <div class="product-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="review-count">(১২৫টি রিভিউ)</span>
+                    </div>
+
+                    <div class="price-section">
+                        <span class="current-price" id="product-price">৳৪৫০০</span>
+                        <span class="original-price" id="product-original-price">৳৫৬২৫</span>
+                        <span class="discount-badge" id="discount-badge">-20%</span>
+                    </div>
+
+                    <div class="stock-status">
+                        <span id="stock-status" class="in-stock">✓ স্টকে আছে</span>
+                    </div>
+
+                    <div class="product-description">
+                        <h3>বিবরণ</h3>
+                        <p id="product-desc">এই প্রিমিয়াম জামদানি শাড়ি হস্তবুননির্মিত এবং ঐতিহ্যবাহী কারুশিল্পের নিখুঁত উদাহরণ। সোনালি জরির কাজ এবং জটিল ডিজাইন এটিকে বিশেষ করে তোলে।</p>
+                    </div>
+
+                    <div class="fabric-care">
+                        <div class="fabric-info">
+                            <h4>ফ্যাব্রিক</h4>
+                            <p id="product-fabric">১০০% খাঁটি সিল্ক</p>
+                        </div>
+                        <div class="care-info">
+                            <h4>যত্ন নির্দেশনা</h4>
+                            <p id="product-care">শুধুমাত্র শুষ্ক পরিষ্কার করুন। ফ্যাব্রিকের উজ্জ্বলতা বজায় রাখতে সরাসরি সূর্যের আলো এড়িয়ে চলুন।</p>
+                        </div>
+                    </div>
+
+                    <div class="occasion-info">
+                        <h4>অনুষ্ঠান</h4>
+                        <p id="product-occasion">বিবাহ, উৎসব এবং বিশেষ অনুষ্ঠানের জন্য আদর্শ</p>
+                    </div>
+
+                    <div class="quantity-selector">
+                        <label for="quantity">পরিমাণ:</label>
+                        <div class="quantity-controls">
+                            <button class="qty-btn" id="qty-minus">−</button>
+                            <input type="number" id="quantity" value="1" min="1" max="5">
+                            <button class="qty-btn" id="qty-plus">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-actions-large">
+                        <button class="buy-now-btn" id="buy-now-btn">এখনই কিনুন</button>
+                        <button class="add-to-cart-btn-large" id="add-to-cart-large">কার্টে যোগ করুন</button>
+                        <button class="wishlist-btn-large" id="wishlist-btn-large">♡ উইশলিস্টে যোগ করুন</button>
+                    </div>
+
+                    <div class="shipping-info">
+                        <div class="shipping-item">
+                            <span class="icon">🚚</span>
+                            <div>
+                                <p><strong>দ্রুত ডেলিভারি</strong></p>
+                                <p>ঢাকায় ২-৩ দিন, বাইরে ৫-৭ দিন</p>
+                            </div>
+                        </div>
+                        <div class="shipping-item">
+                            <span class="icon">↩️</span>
+                            <div>
+                                <p><strong>সহজ রিটার্ন</strong></p>
+                                <p>৭ দিনের মধ্যে কোন প্রশ্ন ছাড়াই</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2>সম্পর্কিত পণ্য</h2>
+            <div class="products-grid" id="related-products-grid"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>📞 যোগাযোগ তথ্য</h4>
+                    <p><strong>হোয়াটসঅ্যাপ/ফোন:</strong> +880 1885092595</p>
+                    <p><strong>ইমেইল:</strong> ruchitasaree0622@gmail.com</p>
+                </div>
+                <div class="footer-col">
+                    <h4>📍 ঠিকানা</h4>
+                    <p><strong>রুচিতা™ RuchitaSareeAura</strong><br>Sekertek 10, Adabar Thana<br>Dhaka - 1207, Bangladesh</p>
+                </div>
+                <div class="footer-col">
+                    <h4>🚚 শিপিং এবং রিটার্ন</h4>
+                    <p>✓ ঢাকার মধ্যে: ৮০ টাকা</p>
+                    <p>✓ ঢাকার বাইরে: ১২০ টাকা</p>
+                    <p>✓ সহজ ৭ দিনের রিটার্ন পলিসি</p>
+                </div>
+                <div class="footer-col">
+                    <h4>🌐 আমাদের অনুসরণ করুন</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1ZyJMqjUBj/" target="_blank" title="Facebook Page">f</a>
+                        <a href="https://www.facebook.com/share/g/18VQsJhz7M/" target="_blank" title="Facebook Group">👥</a>
+                        <a href="https://www.instagram.com/ruchitasareeaura?igsh=MTByM2w5OW1hNWZqNg==" target="_blank" title="Instagram">📷</a>
+                        <a href="https://whatsapp.com/channel/0029Vb81Y01C1FuL0w0vw01C" target="_blank" title="WhatsApp Channel">💬</a>
+                        <a href="https://wa.me/8801885092595" target="_blank" title="WhatsApp Direct">📱</a>
+                        <a href="https://x.com/RuchitaSaree01" target="_blank" title="X (Twitter)">𝕏</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 রুচিতা™ RuchitaSareeAura. সর্বাধিকার সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/products.js"></script>
+    <script src="./js/product-detail.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

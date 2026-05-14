@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>শপ - রুচিতা সেরি আউরা</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500;600;700&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <div class="header-container">
+            <!-- Logo Section -->
+            <div class="logo">
+                <a href="./index.html" class="logo-link">
+                    <div class="logo-text">
+                        <span class="logo-ruchita">Ruchita</span>
+                        <span class="logo-saree-aura">Saree Aura</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
+                <a href="./index.html" class="nav-link">হোম</a>
+                <a href="./shop.html" class="nav-link active">শপ</a>
+                <a href="./about.html" class="nav-link">আমাদের সম্পর্কে</a>
+                <a href="./contact.html" class="nav-link">যোগাযোগ</a>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <input type="text" class="search-box" placeholder="শাড়ি খুঁজুন...">
+                <button class="cart-btn" id="cart-btn">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <!-- Shop Container -->
+    <div class="shop-container">
+        <!-- Sidebar Filters -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>ফিল্টার</h3>
+                <button class="close-sidebar" id="close-sidebar">✕</button>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="filter-group">
+                <h4>ক্যাটাগরি</h4>
+                <label class="filter-label">
+                    <input type="checkbox" class="filter-checkbox" data-filter="category" value="jamdani">
+                    <span>জামদানি</span>
+                </label>
+                <label class="filter-label">
+                    <input type="checkbox" class="filter-checkbox" data-filter="category" value="silk">
+                    <span>সিল্ক</span>
+                </label>
+                <label class="filter-label">
+                    <input type="checkbox" class="filter-checkbox" data-filter="category" value="tat">
+                    <span>সুতি</span>
+                </label>
+                <label class="filter-label">
+                    <input type="checkbox" class="filter-checkbox" data-filter="category" value="batik">
+                    <span>বাটিক</span>
+                </label>
+            </div>
+
+            <!-- Price Range Filter -->
+            <div class="filter-group">
+                <h4>মূল্য পরিসীমা</h4>
+                <label class="filter-label">
+                    <input type="checkbox" class="filter-checkbox" data-filter="price" value="0-1000">
+                    <span>৳০ - ৳১০০০</span>
+                </label>
+                <label class="filter-label">
+                    <input type="checkbox" class="filter-checkbox" data-filter="price" value="1000-3000">
+                    <span>৳১০০০ - ৳৩০০০</span>
+                </label>
+                <label class="filter-label">
+                    <input type="checkbox" class="filter-checkbox" data-filter="price" value="3000-5000">
+                    <span>৳৩০০০ - ৳৫০০০</span>
+                </label>
+                <label class="filter-label">
+                    <input type="checkbox" class="filter-checkbox" data-filter="price" value="5000-20000">
+                    <span>৳৫০০০ - ৳২০০০০</span>
+                </label>
+            </div>
+
+            <!-- Color Filter -->
+            <div class="filter-group">
+                <h4>রঙ</h4>
+                <label class="filter-label">
+                    <input type="checkbox" class="filter-checkbox" data-filter="color" value="লাইম গ্রিন">
+                    <span>লাইম গ্রিন</span>
+                </label>
+                <label class="filter-label">
+                    <input type="checkbox" class="filter-checkbox" data-filter="color" value="ফিরোজা ব্লু">
+                    <span>ফিরোজা ব্লু</span>
+                </label>
+                <label class="filter-label">
+                    <input type="checkbox" class="filter-checkbox" data-filter="color" value="হট পিংক">
+                    <span>হট পিংক</span>
+                </label>
+                <label class="filter-label">
+                    <input type="checkbox" class="filter-checkbox" data-filter="color" value="রয়্যাল রেড">
+                    <span>রয়্যাল রেড</span>
+                </label>
+            </div>
+
+            <!-- Reset Filters Button -->
+            <button class="reset-filters" id="reset-filters">ফিল্টার রিসেট করুন</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="shop-main">
+            <!-- Shop Header -->
+            <div class="shop-header">
+                <h2>আমাদের সংগ্রহ</h2>
+                <button class="filter-toggle" id="filter-toggle">🔽 ফিল্টার</button>
+                <div class="sort-options">
+                    <label for="sort-select">সাজান করুন:</label>
+                    <select id="sort-select">
+                        <option value="latest">নতুন</option>
+                        <option value="price-low">মূল্য: নিম্ন থেকে বৃহৎ</option>
+                        <option value="price-high">মূল্য: বৃহৎ থেকে নিম্ন</option>
+                        <option value="popular">সবচেয়ে লোকপ্রিয়</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="shop-products">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+
+            <!-- No Products Message -->
+            <div class="no-products" id="no-products" style="display: none;">
+                <p>আপনার সার্চের সাথে কোন পণ্য পাওয়া যায়নি।</p>
+                <button class="reset-filters" id="reset-filters-no-products">ফিল্টার রিসেট করুন</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>📞 যোগাযোগ তথ্য</h4>
+                    <p><strong>হোয়াটসঅ্যাপ/ফোন:</strong> +880 1885092595</p>
+                    <p><strong>ইমেইল:</strong> ruchitasaree0622@gmail.com</p>
+                </div>
+                <div class="footer-col">
+                    <h4>📍 ঠিকানা</h4>
+                    <p><strong>রুচিতা™ RuchitaSareeAura</strong><br>Sekertek 10, Adabar Thana<br>Dhaka - 1207, Bangladesh</p>
+                </div>
+                <div class="footer-col">
+                    <h4>🚚 শিপিং এবং রিটার্ন</h4>
+                    <p>✓ ঢাকার মধ্যে: ৮০ টাকা</p>
+                    <p>✓ ঢাকার বাইরে: ১২০ টাকা</p>
+                    <p>✓ সহজ ৭ দিনের রিটার্ন পলিসি</p>
+                </div>
+                <div class="footer-col">
+                    <h4>🌐 আমাদের অনুসরণ করুন</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1ZyJMqjUBj/" target="_blank" title="Facebook Page">f</a>
+                        <a href="https://www.facebook.com/share/g/18VQsJhz7M/" target="_blank" title="Facebook Group">👥</a>
+                        <a href="https://www.instagram.com/ruchitasareeaura?igsh=MTByM2w5OW1hNWZqNg==" target="_blank" title="Instagram">📷</a>
+                        <a href="https://whatsapp.com/channel/0029Vb81Y01C1FuL0w0vw01C" target="_blank" title="WhatsApp Channel">💬</a>
+                        <a href="https://wa.me/8801885092595" target="_blank" title="WhatsApp Direct">📱</a>
+                        <a href="https://x.com/RuchitaSaree01" target="_blank" title="X (Twitter)">𝕏</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 রুচিতা™ RuchitaSareeAura. সর্বাধিকার সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/products.js"></script>
+    <script src="./js/filters.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
